@@ -6,6 +6,14 @@ OIDC:Añade autenticacion,permitiendo que las aplicaciones obtengan informacion 
 Flujo de autorización OAuth 2.0 (Authorization Code Flow) — PASO A PASO DETALLADO
 Este es el flujo más común y seguro, usado por aplicaciones web (cliente backend con servidor).
 
+## COMPONENTES DE OIDC
+### ID TOKEN
+Es el token contiene informacion sobre la identidad del usuario como nombre correo
+este token se usa junto con el token d acceso
+
+### USER INFO ENDPOINT
+Es un endpoint en donde las aplicaciones pueden obtener mas detalles sobre el usuario autenticado
+
 ## ✅ ROLES INVOLUCRADOS
 Rol	Qué es
 - Resource Owner	El usuario que da el permiso.
