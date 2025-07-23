@@ -205,3 +205,83 @@ Si ya existe, lo autenticas y generas un token propio (por ejemplo, un JWT local
 [Tu Backend] — POST con code —> [Google Token Endpoint]
      <——— access_token + id_token ——
 [Tu Backend] — decodifica token —> [Datos del usuario]
+
+## ¿Qué es JWT?
+JWT (JSON Web Token) es un formato estándar para intercambiar información segura y compacta entre dos partes, comúnmente entre un cliente (como una app) y un servidor.
+
+📦 Estructura de un JWT
+Un JWT se compone de tres partes, separadas por puntos:
+
+
+- Header (encabezado)
+
+- Payload (datos o claims)
+
+- Signature (firma)
+
+🔍 Ejemplo real de JWT
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJ1c2VybmFtZSI6Imp1YW4iLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDAwMDAwMDB9.
+AbCDefGhIjKLMNoPqrSTuVWxYz1234567890abcdEFGH
+
+🔧 ¿Qué contiene cada parte?
+- 1. Header (encabezado)
+Especifica el algoritmo de firma y el tipo de token.
+
+json
+
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+
+- 2. Payload (contenido)
+Contiene la información (también llamada claims):
+
+{
+  "sub": "1234567890",
+  "username": "juanperez",
+  "role": "ADMIN",
+  "exp": 1700000000
+}
+
+Campos comunes:
+
+sub: identificador del usuario.
+
+username: nombre de usuario.
+
+role: rol de usuario (ej: ADMIN).
+
+exp: fecha de expiración (timestamp).
+
+⚠️ Ojo: esta información está codificada, no cifrada (cualquiera puede verla si tiene el token).
+
+3. Signature (firma)
+Se usa para verificar que el token no fue alterado. Se calcula así:
+
+HMACSHA256(
+  base64UrlEncode(header) + "." + base64UrlEncode(payload),
+  secret
+)
+Tu servidor usa un secret key para firmar, y lo valida cada vez que recibe un token.
+
+## 🔒 ¿Para qué sirve JWT?
+✅ Autenticación: el cliente lo recibe después de iniciar sesión.
+
+✅ Autorización: el token indica qué permisos tiene el usuario.
+
+✅ Stateless: no necesitas guardar sesiones en el servidor.
+
+## 🧠 Ejemplo de uso típico
+Usuario inicia sesión con usuario y contraseña.
+
+El servidor responde con un JWT.
+
+El cliente guarda el JWT (en memoria, localStorage, etc.).
+
+En cada petición posterior, el cliente lo envía en la cabecera:
+
+Authorization: Bearer eyJhbGciOi...
+El servidor verifica la firma y extrae los datos para saber quién es y qué puede hacer.
