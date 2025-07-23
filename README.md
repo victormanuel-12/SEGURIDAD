@@ -226,7 +226,7 @@ eyJ1c2VybmFtZSI6Imp1YW4iLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDAwMDAwMDB9.
 AbCDefGhIjKLMNoPqrSTuVWxYz1234567890abcdEFGH
 
 🔧 ¿Qué contiene cada parte?
-- 1. Header (encabezado)
+### 1. Header (encabezado)
 Especifica el algoritmo de firma y el tipo de token.
 
 json
@@ -236,7 +236,7 @@ json
   "typ": "JWT"
 }
 
-- 2. Payload (contenido)
+### 2. Payload (contenido)
 Contiene la información (también llamada claims):
 
 {
@@ -258,7 +258,7 @@ exp: fecha de expiración (timestamp).
 
 ⚠️ Ojo: esta información está codificada, no cifrada (cualquiera puede verla si tiene el token).
 
-3. Signature (firma)
+### 3. Signature (firma)
 Se usa para verificar que el token no fue alterado. Se calcula así:
 
 HMACSHA256(
