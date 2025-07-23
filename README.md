@@ -1,7 +1,12 @@
+OIDC(OpenID CONNECT)
+Añade una capa de autenticacion sobre OAUTH2 que permite a las aplicacion verificar la identidad del usuario
+Oauth2 Solo maneja la autorizacion de acceso a recursos
+OIDC:Añade autenticacion,permitiendo que las aplicaciones obtengan informacion sobre el usuario (como su nombre,correo) de un proveedor de identidad. 
+
 Flujo de autorización OAuth 2.0 (Authorization Code Flow) — PASO A PASO DETALLADO
 Este es el flujo más común y seguro, usado por aplicaciones web (cliente backend con servidor).
 
-✅ ROLES INVOLUCRADOS
+## ✅ ROLES INVOLUCRADOS
 Rol	Qué es
 - Resource Owner	El usuario que da el permiso.
 - Client	La app que solicita el acceso (por ejemplo, tu app web).
@@ -285,3 +290,5 @@ En cada petición posterior, el cliente lo envía en la cabecera:
 
 Authorization: Bearer eyJhbGciOi...
 El servidor verifica la firma y extrae los datos para saber quién es y qué puede hacer.
+
+
