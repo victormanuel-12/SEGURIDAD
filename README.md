@@ -13,9 +13,24 @@ este token se usa junto con el token d acceso
 ### USER INFO ENDPOINT
 Es un endpoint en donde las aplicaciones pueden obtener mas detalles sobre el usuario autenticado
 
+# ¿Qué es OAuth 2.0?
+OAuth 2.0 es un protocolo de autorización que permite a una aplicación obtener acceso limitado a recursos protegidos en nombre de un usuario, sin necesidad de compartir su contraseña.
+
 Flujo de autorización OAuth 2.0 (Authorization Code Flow) — PASO A PASO DETALLADO
 Este es el flujo más común y seguro, usado por aplicaciones web (cliente backend con servidor).
 
+### ¿Cómo funciona? (resumen general)
+Tú usas una app y haces clic en "Iniciar sesión con Google".
+
+Esa app te redirige a Google (servidor de autorización).
+
+Google te pide iniciar sesión y dar permiso a la app.
+
+Google responde con un authorization code.
+
+La app usa ese código para obtener un access token.
+
+La app usa el token para pedir información (como tu correo o fotos).
 ## ✅ ROLES INVOLUCRADOS
 Rol	Qué es
 - Resource Owner	El usuario que da el permiso.
