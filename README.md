@@ -1,10 +1,9 @@
-OIDC(OpenID CONNECT)
+## OIDC(OpenID CONNECT)
 Añade una capa de autenticacion sobre OAUTH2 que permite a las aplicacion verificar la identidad del usuario
-Oauth2 Solo maneja la autorizacion de acceso a recursos
-OIDC:Añade autenticacion,permitiendo que las aplicaciones obtengan informacion sobre el usuario (como su nombre,correo) de un proveedor de identidad. 
-
-Flujo de autorización OAuth 2.0 (Authorization Code Flow) — PASO A PASO DETALLADO
-Este es el flujo más común y seguro, usado por aplicaciones web (cliente backend con servidor).
+## Oauth2 
+Solo maneja la autorizacion de acceso a recursos
+## OIDC
+Añade autenticacion,permitiendo que las aplicaciones obtengan informacion sobre el usuario (como su nombre,correo) de un proveedor de identidad. 
 
 ## COMPONENTES DE OIDC
 ### ID TOKEN
@@ -13,6 +12,9 @@ este token se usa junto con el token d acceso
 
 ### USER INFO ENDPOINT
 Es un endpoint en donde las aplicaciones pueden obtener mas detalles sobre el usuario autenticado
+
+Flujo de autorización OAuth 2.0 (Authorization Code Flow) — PASO A PASO DETALLADO
+Este es el flujo más común y seguro, usado por aplicaciones web (cliente backend con servidor).
 
 ## ✅ ROLES INVOLUCRADOS
 Rol	Qué es
