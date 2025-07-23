@@ -209,7 +209,7 @@ Si ya existe, lo autenticas y generas un token propio (por ejemplo, un JWT local
 ## ¿Qué es JWT?
 JWT (JSON Web Token) es un formato estándar para intercambiar información segura y compacta entre dos partes, comúnmente entre un cliente (como una app) y un servidor.
 
-📦 Estructura de un JWT
+## 📦 Estructura de un JWT
 Un JWT se compone de tres partes, separadas por puntos:
 
 
@@ -225,7 +225,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
 eyJ1c2VybmFtZSI6Imp1YW4iLCJyb2xlIjoiQURNSU4iLCJleHAiOjE3MDAwMDAwMDB9.
 AbCDefGhIjKLMNoPqrSTuVWxYz1234567890abcdEFGH
 
-🔧 ¿Qué contiene cada parte?
+## 🔧 ¿Qué contiene cada parte?
 ### 1. Header (encabezado)
 Especifica el algoritmo de firma y el tipo de token.
 
